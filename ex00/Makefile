@@ -8,7 +8,7 @@ OBJS = $(patsubst %.cpp,$(OBJ_DIR)/%.o,$(SRCS))
 DEPENDS = $(OBJS:.o=.d)
 
 NAME = ClapTrap
--include $(DEPEND)
+-include $(DEPENDS)
 
 .PHONY: all
 all: $(NAME)

@@ -6,21 +6,25 @@ int main()
 
 	std::cout << "\n--- attack test ---\n";
 	a.attack("B");
+	a.status();
 
 	std::cout << "\n--- takeDamage test ---\n";
-	a.takeDamage(3);
+	a.takeDamage(5);
+	a.status();
 
 	std::cout << "\n--- beRepaired test ---\n";
-	a.beRepaired(2);
+	a.beRepaired(6);
+	a.status();
 
 	std::cout << "\n--- copy constructor test ---\n";
 	ClapTrap b(a);
 	b.attack("C");
+	b.status();
 
 	std::cout << "\n--- assignment operator test ---\n";
 	ClapTrap c("C");
 	c = a;
 	c.attack("D");
-
+	a.status();
 	return 0;
 }
