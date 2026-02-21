@@ -90,5 +90,4 @@ void ClapTrap::beRepaired(unsigned int amount)
 void ClapTrap::status() const
 {
 	std::cout << "ClapTrap " << _name << " HP: " << _hitPoints << " EP:" << _energyPoints << std::endl;
-
 }
