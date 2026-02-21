@@ -1,21 +1,14 @@
 #include "ClapTrap.hpp"
 
 ClapTrap::ClapTrap() :
-_name("default"),
-_hitPoints (10),
-_energyPoints (10),
-_attackDamage (0)
+_name("default"), _hitPoints (10), _energyPoints (10), _attackDamage (0)
 {
 	std::cout << "ClapTrap " << _name << " default constructed" << std::endl;
-
 }
 
-ClapTrap::ClapTrap(std::string name)
+ClapTrap::ClapTrap(std::string name) :
+	_name(name), _hitPoints(10), _energyPoints(10), _attackDamage(0)
 {
-	_name = name;
-	_hitPoints = 10;
-	_energyPoints = 10;
-	_attackDamage = 0;
 	std::cout << "ClapTrap " << _name << " constructed" << std::endl;
 }
 
@@ -81,8 +74,8 @@ void ClapTrap::beRepaired(unsigned int amount)
 		return ;
 	}
 	_hitPoints += amount;
-	if (_hitPoints > 10)
-		_hitPoints = 10;
+	if (_hitPoints > 100)
+		_hitPoints = 100;
 	std::cout << "ClapTrap " << _name << " has been repaired for " << amount << " hit points." << std::endl;
 	_energyPoints--;
 }

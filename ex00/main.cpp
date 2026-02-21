@@ -1,6 +1,7 @@
 #include "ClapTrap.hpp"
 
-int main()
+
+int	main(void)
 {
 	ClapTrap a("A");
 
@@ -25,6 +26,16 @@ int main()
 	ClapTrap c("C");
 	c = a;
 	c.attack("D");
-	a.status();
+	c.status();
+
+	std::cout << "\n--- energy point test ---\n";
+
+	for (int i = 0; i < 10; i++)
+	{
+		b.attack("target");
+		b.status();
+	}
+	b.attack("target"); 
+	b.beRepaired(5);    
 	return 0;
 }

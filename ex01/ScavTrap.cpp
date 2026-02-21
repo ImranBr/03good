@@ -10,7 +10,6 @@ _attackDamage = 20;
 
 ScavTrap::ScavTrap(std::string name) : ClapTrap(name)
 {
-	_name = name;
 	_hitPoints = 100;
 	_energyPoints = 50;
 	_attackDamage = 20;
@@ -42,6 +41,11 @@ void ScavTrap::attack(const std::string &target)
 
 void ScavTrap::guardGate()
 {
+	if (_hitPoints == 0 || _energyPoints == 0)
+	{
+		std::cout << "ScavTrap " << _name  << " can't enter Gate keeper mode without energy or if it is already dead." << std::endl;
+		return ;
+	}
     std::cout << "ScavTrap " << _name << " is now in mode Gate Keeper." << std::endl;
 }
 

@@ -1,8 +1,8 @@
-#include "ScavTrap.hpp"
+#include "FragTrap.hpp"
 
 int main()
 {
-	ScavTrap a("A");
+	FragTrap a("A");
 
 	std::cout << "\n--- attack test ---\n";
 	a.attack("B");
@@ -17,20 +17,20 @@ int main()
 	a.status();
 
 	std::cout << "\n--- guardGate test ---\n";
-	a.guardGate();
+	a.highFivesGuys();
 
 	std::cout << "\n--- copy constructor test ---\n";
-	ScavTrap b(a);
+	FragTrap b(a);
 	
     b.attack("C");
 	b.status();
 
 	std::cout << "\n--- assignment operator test ---\n";
-	ScavTrap c("C");
+	FragTrap c("C");
 	
     c = a;
 	c.attack("D");
-	c.status();
+	a.status();
 
 	return 0;
 }

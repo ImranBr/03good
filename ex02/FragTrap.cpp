@@ -29,20 +29,20 @@ FragTrap &FragTrap::operator=(const FragTrap &other)
 	return (*this);
 }
 
-// void FragTrap::attack(const std::string &target)
-// {
-// 	if (_hitPoints == 0 || _energyPoints == 0)
-// 	{
-// 		std::cout << "FragTrap " << _name << " can't attack without energy or if he is already dead." << std::endl;
-// 		return ;
-// 	}
-// 	std::cout << "FragTrap " << _name << " attacks " << target << ", causing " << _attackDamage << " points of damage!" << std::endl;
-// 	_energyPoints--;
-// }
+void FragTrap::attack(const std::string &target)
+{
+	if (_hitPoints == 0 || _energyPoints == 0)
+	{
+		std::cout << "FragTrap " << _name << " can't attack without energy or if he is already dead." << std::endl;
+		return ;
+	}
+	std::cout << "FragTrap " << _name << " attacks " << target << ", causing " << _attackDamage << " points of damage!" << std::endl;
+	_energyPoints--;
+}
 
 void FragTrap::highFivesGuys()
 {
-    std::cout << "FragTrap " << _name << " is now in mode high Five Guys." << std::endl;
+    std::cout << "FragTrap " << _name << " made a high Five." << std::endl;
 }
 
 FragTrap::~FragTrap()
